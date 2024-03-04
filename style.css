@@ -109,8 +109,9 @@ a:hover {
     }
 
     h1 {
-        font-size: 13px;
+        font-size: 50px;
         margin-top: 150px;
+        margin-left: 30px;
     }
 
     .logo img {
@@ -122,6 +123,7 @@ a:hover {
     header {
         margin: 10px;
         padding: 5px 10px;
+        height: 125px;
     }
 
     ul {
@@ -189,5 +191,6 @@ a:hover {
     .menu li {
         padding: 10px;
     }
+    
 }
 
