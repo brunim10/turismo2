@@ -8,15 +8,12 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Define a altura da imagem de fundo como 100% da altura da janela */
+    height: 100vh;
     width: 100vw;
     overflow: hidden;
-
-
 }
 
-    
-.button-inicio{
+.button-inicio {
     color: #fff;
     text-decoration: none;
     transition: 1.0s;
@@ -29,10 +26,10 @@ body {
     background-color: orange;
     margin-right: 600px;
     margin-left: 600px;
-    border-radius: 40px ;
+    border-radius: 40px;
 }
 
-h1{
+h1 {
     color: #fff;
     text-decoration: none;
     transition: 2.3s;
@@ -44,25 +41,22 @@ h1{
     margin-top: 90px;
 }
 
-.button-inicio:hover{
-    opacity: 0.3    ;
+.button-inicio:hover {
+    opacity: 0.3;
 }
 
-.logo{
-    
+.logo {
     width: 50%;
     display: flex;
-  
-    
-    
 }
 
-img{
+img {
     height: 200px;
     margin-left: 70px;
 }
-header{
-    background-color:#fff;
+
+header {
+    background-color: #fff;
     height: 100px;
     margin-top: 40px;
     margin-left: 200px;
@@ -70,80 +64,139 @@ header{
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Alinha verticalmente ao centro */
-    padding: 10px 20px; /* Adicione algum espaçamento interno */
+    align-items: center;
+    padding: 10px 20px;
     background-color: #f8f9fa;
-   
 }
 
-li{
+li {
     display: flex;
-    list-style-type: none; /* Remova os marcadores da lista */
+    list-style-type: none;
     padding: 30px 30px 30px;
     flex-wrap: nowrap;
 }
-ul{
+
+ul {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif ;
-    
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-a:hover{
+a:hover {
     opacity: 0.3;
     font-family: cursive;
-    
 }
 
-@media screen and (max-width: 480px){
-    body {
-        background-image: url(porfavor.jpg);
-        background-size: cover; /* Faz a imagem cobrir toda a tela */
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-    }
+.menu {
+    display: none;
+}
 
-    .button-inicio{
-        margin-right: 20px; /* Reduza a margem direita do botão */
-        margin-left: 20px; /* Reduza a margem esquerda do botão */
-        border-radius: 20px ; /* Reduza o raio da borda do botão */
+.menu-toggle {
+    display: none;
+}
+.menu {
+    display: none;
+}
+
+.menu-toggle {
+    display: none; /* Esconda o botão de toggle por padrão */
+}
+
+@media screen and (max-width: 480px) {
+    .button-inicio {
+        margin-right: 20px;
+        margin-left: 20px;
+        border-radius: 20px;
     }
 
     h1 {
-        font-size: 30px; /* Reduza o tamanho da fonte do título */
-        margin-top: 40px; /* Reduza a margem superior do título */
+        font-size: 20px;
+        margin-top: 40px;
     }
 
     .logo img {
-        width: 100%; /* Faça a imagem da logo ocupar 100% da largura disponível */
-        margin: 0 auto; /* Centralize a imagem da logo horizontalmente */
-        display: block; /* Remova a propriedade 'flex' para a imagem da logo */
+        width: 100%;
+        margin: 0 auto;
+        display: block;
     }
 
     header {
-        margin: 10px; /* Reduza a margem do cabeçalho */
-        padding: 5px 10px; /* Reduza o preenchimento do cabeçalho */
+        margin: 10px;
+        padding: 5px 10px;
     }
 
     ul {
-        display: block; /* Exiba a lista verticalmente */
-        text-align: center; /* Centralize o texto da lista */
-        padding: 10px; /* Adicione algum espaçamento interno à lista */
+        display: block;
+        text-align: center;
+        padding: 10px;
     }
 
     li {
-        padding: 10px; /* Adicione algum espaçamento interno aos itens da lista */
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f9fa;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .menu ul {
+        padding: 20px;
+    }
+
+    .menu li {
+        padding: 10px;
+    }
+    .menu-toggle {
+        display: block; /* Exiba o botão de toggle apenas em telas pequenas */
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f9fa;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .menu.active {
+        transform: translateY(0);
+    }
+
+    .menu ul {
+        padding: 20px;
+    }
+
+    .menu li {
+        padding: 10px;
     }
 }
+
