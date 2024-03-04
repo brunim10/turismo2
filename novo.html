@@ -29,6 +29,7 @@
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
 
+
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var menuToggle = document.querySelector('.menu-toggle');
@@ -39,11 +40,14 @@
             menu.classList.toggle('active');
         });
     
-        document.addEventListener('click', function() {
-            menu.classList.remove('active');
+        document.addEventListener('touchstart', function(event) {
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('active');
+            }
         });
     });
 </script>
+    
     
 </body>
 
