@@ -106,7 +106,13 @@ a:hover{
 
 @media screen and (max-width: 480px){
     body {
-         /* Mude o tamanho da imagem de fundo para 'contain' para garantir que ela caiba na tela */
+        background-image: url(porfavor.jpg);
+        background-size: cover; /* Faz a imagem cobrir toda a tela */
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
     }
 
     .button-inicio{
