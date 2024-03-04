@@ -30,15 +30,21 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuToggle = document.querySelector('.menu-toggle');
-            var menu = document.querySelector('.menu');
-
-            menuToggle.addEventListener('click', function() {
-                menu.classList.toggle('active');
-            });
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.querySelector('.menu-toggle');
+        var menu = document.querySelector('.menu');
+    
+        menuToggle.addEventListener('click', function(event) {
+            event.stopPropagation(); // Impede que o clique no botão propague para o documento
+            menu.classList.toggle('active');
         });
-    </script>
+    
+        document.addEventListener('click', function() {
+            menu.classList.remove('active');
+        });
+    });
+</script>
+    
 </body>
 
 </html>
